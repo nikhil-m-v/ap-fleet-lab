@@ -90,7 +90,11 @@ class Simulation:
                     arrival = 0.0
                     while arrival < self.total:
                         state.arrivals.append(arrival)
-                        arrival += rng.expovariate(1 / max(1.0, nominal * 1.5))
+                        # Normalize per-robot arrivals by fleet size so this is
+                        # a low-load regime rather than saturated queues at N>=4.
+                        arrival += rng.expovariate(
+                            1 / max(1.0, nominal * 1.5 * len(self.scenario.robots))
+                        )
                 else:
                     for burst in np.arange(0, self.total, 30.0):
                         state.arrivals.extend([float(burst)] * rng.randint(1, 3))

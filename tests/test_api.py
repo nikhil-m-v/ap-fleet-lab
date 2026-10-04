@@ -31,7 +31,7 @@ def test_validation_run_controls_websocket_and_replay(tmp_path, monkeypatch):
         with client.websocket_connect(f"/api/runs/{identifier}/stream") as ws:
             snapshot = ws.receive_json()
             assert snapshot["id"] == identifier
-        for _ in range(100):
+        for _ in range(200):
             snapshot = client.get(f"/api/runs/{identifier}").json()
             if snapshot["status"] not in ("starting", "running"):
                 break

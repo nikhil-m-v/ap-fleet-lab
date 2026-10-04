@@ -107,3 +107,31 @@ def test_large_fleet_constructive_period_is_certified(kind):
     assert plan.status == "OPTIMAL"
     assert plan.period == pytest.approx(plan.lower_bound)
     assert plan.optimality_gap == 0
+
+
+def test_general_nonclique_component_uses_solver_and_parallelizes():
+    def robot(name, start, end):
+        return Robot(id=name, legs=[[start, end], [end, start]])
+
+    scenario = validate_geometry(
+        Scenario(
+            name="chain",
+            robots=[
+                robot("a", (-5, 0), (5, 0)),
+                robot("b", (0, -5), (0, 5)),
+                robot("c", (-5, 3), (5, 3)),
+            ],
+        )
+    )
+    conflicts = incompatibilities(scenario)
+    periodic = PeriodicScheduler(conflicts).plan(scenario)
+    assert periodic.status == "OPTIMAL"
+    assert "Exact independent clique certificate: False" in periodic.diagnostics
+    duration = ticks(nominal_duration(scenario.robots[0], 0)) + 2
+    assert periodic.period == pytest.approx(4 * duration * TICK)
+    rolling = RollingScheduler(conflicts).plan(
+        scenario, {"time": 0, "pending": [("a", 0), ("b", 0), ("c", 0)], "active": []}
+    )
+    assert rolling.status == "OPTIMAL"
+    assert rolling.starts["a"][0] == rolling.starts["c"][0] == 0
+    assert rolling.starts["b"][0] >= duration * TICK

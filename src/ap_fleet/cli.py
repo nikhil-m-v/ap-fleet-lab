@@ -54,6 +54,7 @@ def execute(config, artifact=None):
             stream.close()
     return {
         "config": config.model_dump(),
+        "demand_model": "fleet-normalized-v1",
         "status": simulation.status,
         "metrics": simulation.metrics(),
         "plan": simulation.plan.model_dump(),

@@ -4,6 +4,8 @@ A local research workbench for **arithmetic-progression schedules and robot thro
 
 ![Workbench](docs/demo.png)
 
+[Watch the recorded demo](docs/demo.webm)
+
 ## Start locally
 
 Requires **Python 3.12 or 3.13**, Node.js 22+, and npm. Use Python 3.12 for the committed dependency lock. The service binds to localhost and has no user authentication.
@@ -62,7 +64,7 @@ npm test
 npm run build
 ```
 
-GitHub Actions runs backend tests on Windows and Linux, a short benchmark, and frontend checks. Source and third-party dependencies are independently licensed. This repository uses original code; it does not copy the cited implementations.
+GitHub Actions runs backend tests on Windows and Linux, a short benchmark, frontend checks, and Chromium end-to-end tests. To run browser checks locally, use `npx playwright install chromium` then `npm run test:e2e` in `frontend`. Source and third-party dependencies are independently licensed. This repository uses original code; it does not copy the cited implementations.
 
 ## Prior work
 

@@ -32,19 +32,25 @@ More distant copies cannot intersect because all starts are in [0,2T) and each m
 
 Solver budgets constrain solver search, not preprocessing/model construction. Only OPTIMAL means optimal within this model. FEASIBLE includes the best bound and relative gap. UNKNOWN, INFEASIBLE, and MODEL_INVALID admit no periodic movements. There is no automatic algorithm fallback.
 
+When the conflict graph (including each robot's own traversals) consists of independent complete components, the busiest component's summed traversal durations certifies a shortest possible period. Serialize whole missions within each component and run components concurrently to achieve that bound. The implementation checks every shifted incompatible pair numerically, fixes this constructive optimum in the CP-SAT model, and still honors solver timeout/status handling. Noncomplete components retain the general disjunctive formulation. This reduction is useful for the supplied conservative templates and is not claimed as novel.
+
 ## Execution strategies
 
 FCFS orders current requests by ready time then robot ID. Periodic admission orders eligible current traversal requests by scheduled entry then robot ID, while retaining delayed active permissions; no fixed global action-dependency graph is imposed. Thus this is an AP-guided, occupancy-gated execution policy, not a proof of preservation of all planned cross-robot orders after arbitrary delays.
 
 A robot never starts a second mission while its current mission is incomplete. A unavailable first-leg slot advances to the next applicable cycle. Overdue later legs wait at their private bays. This first version does not lend empty slots or repair phases.
 
-Rolling optimization uses one currently pending traversal per ready robot. Active movements and cooldowns impose fixed earliest starts on conflicting requests. Minimize makespan, then sum of start times using an integer objective multiplier. Replan when pending identities or active motions change. Active reservations remain immutable. This limited horizon is explicit so it cannot be confused with the established full rolling-horizon MAPF method.
+Rolling optimization uses one currently pending traversal per ready robot. Active movements and cooldowns impose fixed earliest starts on conflicting requests; remaining times include the applicable cooldown. Minimize makespan, then weighted start times using an integer objective multiplier. Request-age order assigns weights N, N−1, …, 1. Independent conflict cliques with identical release times use an exact duration/weight ordering reduction (Smith's rule), with CP-SAT validating the resulting fixed starts. General components remain solver decisions. Replan when pending identities or active motions change. Active reservations remain immutable. This limited horizon is explicit so it cannot be confused with the established full rolling-horizon MAPF method; it provides no general starvation bound.
 
 All strategies enforce actual occupancy and the same cooldown margin. Safety does not rely on meeting planned timestamps.
 
 ## Independent verification
 
 For each interval, a speed-bound broad phase excludes pairs that cannot approach within the required clearance. Remaining pairs split time at both robots' phase boundaries. Relative position is quadratic; squared separation is quartic, and its stationary points are roots of a cubic derivative. Evaluate endpoints and real roots within the interval. No reservation-graph information enters this checker. Floating-point tolerances are 1e-7 meters for violations; this is a numeric check, not formal verification.
+
+## Demand and paired randomness
+
+Saturated demand supplies one next mission whenever a robot finishes. Intermittent demand uses exponential arrival gaps with mean `1.5 × fleet size × nominal robot mission duration`; fleet normalization creates a low-load regime instead of inadvertently saturating every larger fleet. Bursts release 1–3 jobs per robot every 30 seconds, typically creating an overloaded regime. Every robot starts with an initial job, so the finite-window initialization caveat matters. SHA-256-derived random streams are indexed by seed, robot, mission, traversal and disturbance type; changing admission order does not change the random draw assigned to a mission.
 
 ## Public interfaces
 

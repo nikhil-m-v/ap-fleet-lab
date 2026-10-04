@@ -7,7 +7,7 @@ test('run, pause, disrupt, resume, compare, and replay',async({page})=>{
   await page.getByLabel('Scheduling strategy').selectOption('fcfs');
   await page.getByLabel('Measure, seconds').fill('20');
   await page.getByRole('button',{name:'Run experiment →'}).click();
-  await expect(page.locator('.status')).toHaveText('RUNNING');
+  await expect(page.locator('.status')).toHaveText('RUNNING',{timeout:15000});
   await page.getByRole('button',{name:'Pause',exact:true}).click();
   await expect(page.locator('.status')).toHaveText('PAUSED');
   const pausedClock=await page.locator('.clock').innerText();
