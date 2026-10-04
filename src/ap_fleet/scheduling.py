@@ -1,5 +1,6 @@
 import math
 import time
+from fractions import Fraction
 from ortools.sat.python import cp_model
 from .models import PlanResult
 from .motion import nominal_duration
@@ -151,10 +152,12 @@ class RollingScheduler:
         upper = sum(durations.values()) + frozen_end + guard + 1
         model = cp_model.CpModel()
         starts = {key: model.new_int_var(0, upper, "s_" + str(key)) for key in pending}
+        releases = {key: 0 for key in pending}
         for key in pending:
             for frozen, remaining in active:
                 if key[0] == frozen[0] or frozenset((key, frozen)) in self.conflicts:
                     model.add(starts[key] >= ticks(remaining))
+                    releases[key] = max(releases[key], ticks(remaining))
         for index, a in enumerate(pending):
             for b in pending[index + 1 :]:
                 if frozenset((a, b)) in self.conflicts:
@@ -172,6 +175,39 @@ class RollingScheduler:
         # Makespan first, then total completion time. Requests are sorted FCFS before
         # variable creation; this tie-break is deterministic, not a fairness proof.
         weights = {key: len(pending) - index for index, key in enumerate(pending)}
+        # An isolated clique with equal releases is a single-machine problem.
+        # Smith's duration/weight order minimizes weighted start/completion time,
+        # and its non-idling schedule also minimizes makespan. Fixing that exact
+        # optimum avoids factorial CP search; general components remain free.
+        unseen = set(pending)
+        reductions = 0
+        while unseen:
+            seed = min(unseen)
+            component, frontier = {seed}, [seed]
+            unseen.remove(seed)
+            while frontier:
+                node = frontier.pop()
+                neighbors = {
+                    key for key in unseen if frozenset((key, node)) in self.conflicts
+                }
+                component.update(neighbors)
+                unseen.difference_update(neighbors)
+                frontier.extend(neighbors)
+            clique = all(
+                frozenset((a, b)) in self.conflicts
+                for a in component
+                for b in component
+                if a != b
+            )
+            if clique and len({releases[key] for key in component}) == 1:
+                at = releases[seed]
+                for key in sorted(
+                    component,
+                    key=lambda key: (Fraction(durations[key], weights[key]), key),
+                ):
+                    model.add(starts[key] == at)
+                    at += durations[key]
+                reductions += 1
         model.minimize(
             finish * (sum(weights.values()) * upper + 1)
             + sum(weights[key] * starts[key] for key in pending)
@@ -191,5 +227,8 @@ class RollingScheduler:
                 for key in pending
             },
             planning_seconds=time.perf_counter() - began,
-            diagnostics=["One pending traversal per robot; active movements frozen"],
+            diagnostics=[
+                "One pending traversal per robot; active movements frozen",
+                f"Exact equal-release clique reductions: {reductions}",
+            ],
         )

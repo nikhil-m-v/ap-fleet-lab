@@ -73,3 +73,28 @@ def test_invalid_waiting_bay_and_noncyclic_route():
     )
     with pytest.raises(ValueError, match="Private bay"):
         validate_geometry(scenario)
+
+
+def test_rolling_clique_reduction_matches_exhaustive_weighted_optimum():
+    scenario = make_scenario("intersection", 3)
+    for index, robot in enumerate(scenario.robots):
+        robot.max_speed = 0.8 + index * 0.3
+    pending = [(r.id, 0) for r in scenario.robots]
+    durations = {
+        key: ticks(nominal_duration(scenario.robots[i], 0)) + 2
+        for i, key in enumerate(pending)
+    }
+    weights = {key: len(pending) - i for i, key in enumerate(pending)}
+    scores = []
+    for order in itertools.permutations(pending):
+        at, score = 0, 0
+        for key in order:
+            score += weights[key] * at
+            at += durations[key]
+        scores.append(score)
+    plan = RollingScheduler(incompatibilities(scenario)).plan(
+        scenario, {"time": 0, "pending": pending, "active": []}
+    )
+    assert plan.status == "OPTIMAL"
+    score = sum(weights[key] * round(plan.starts[key[0]][0] / TICK) for key in pending)
+    assert score == min(scores)
