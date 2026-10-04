@@ -1,0 +1,2162 @@
+[
+  {
+    "condition": [
+      "corridor",
+      4,
+      "bursts",
+      0.0,
+      0.0
+    ],
+    "baseline": "fcfs",
+    "paired_seeds": 20,
+    "mean_throughput_delta": -0.10000000000000009,
+    "wins": 0,
+    "ties": 0,
+    "losses": 20
+  },
+  {
+    "condition": [
+      "corridor",
+      4,
+      "bursts",
+      0.15,
+      0.1
+    ],
+    "baseline": "fcfs",
+    "paired_seeds": 20,
+    "mean_throughput_delta": -0.1699999999999998,
+    "wins": 1,
+    "ties": 0,
+    "losses": 19
+  },
+  {
+    "condition": [
+      "corridor",
+      4,
+      "intermittent",
+      0.0,
+      0.0
+    ],
+    "baseline": "fcfs",
+    "paired_seeds": 20,
+    "mean_throughput_delta": -0.405,
+    "wins": 0,
+    "ties": 0,
+    "losses": 20
+  },
+  {
+    "condition": [
+      "corridor",
+      4,
+      "intermittent",
+      0.15,
+      0.1
+    ],
+    "baseline": "fcfs",
+    "paired_seeds": 20,
+    "mean_throughput_delta": -0.38,
+    "wins": 0,
+    "ties": 0,
+    "losses": 20
+  },
+  {
+    "condition": [
+      "corridor",
+      4,
+      "saturated",
+      0.0,
+      0.0
+    ],
+    "baseline": "fcfs",
+    "paired_seeds": 20,
+    "mean_throughput_delta": -0.10000000000000009,
+    "wins": 0,
+    "ties": 0,
+    "losses": 20
+  },
+  {
+    "condition": [
+      "corridor",
+      4,
+      "saturated",
+      0.15,
+      0.1
+    ],
+    "baseline": "fcfs",
+    "paired_seeds": 20,
+    "mean_throughput_delta": -0.1699999999999998,
+    "wins": 1,
+    "ties": 0,
+    "losses": 19
+  },
+  {
+    "condition": [
+      "corridor",
+      8,
+      "bursts",
+      0.0,
+      0.0
+    ],
+    "baseline": "fcfs",
+    "paired_seeds": 20,
+    "mean_throughput_delta": -0.19999999999999973,
+    "wins": 0,
+    "ties": 0,
+    "losses": 20
+  },
+  {
+    "condition": [
+      "corridor",
+      8,
+      "bursts",
+      0.15,
+      0.1
+    ],
+    "baseline": "fcfs",
+    "paired_seeds": 20,
+    "mean_throughput_delta": 0.045000000000000026,
+    "wins": 9,
+    "ties": 9,
+    "losses": 2
+  },
+  {
+    "condition": [
+      "corridor",
+      8,
+      "intermittent",
+      0.0,
+      0.0
+    ],
+    "baseline": "fcfs",
+    "paired_seeds": 20,
+    "mean_throughput_delta": -0.585,
+    "wins": 0,
+    "ties": 0,
+    "losses": 20
+  },
+  {
+    "condition": [
+      "corridor",
+      8,
+      "intermittent",
+      0.15,
+      0.1
+    ],
+    "baseline": "fcfs",
+    "paired_seeds": 20,
+    "mean_throughput_delta": -0.44500000000000006,
+    "wins": 0,
+    "ties": 0,
+    "losses": 20
+  },
+  {
+    "condition": [
+      "corridor",
+      8,
+      "saturated",
+      0.0,
+      0.0
+    ],
+    "baseline": "fcfs",
+    "paired_seeds": 20,
+    "mean_throughput_delta": -0.19999999999999973,
+    "wins": 0,
+    "ties": 0,
+    "losses": 20
+  },
+  {
+    "condition": [
+      "corridor",
+      8,
+      "saturated",
+      0.15,
+      0.1
+    ],
+    "baseline": "fcfs",
+    "paired_seeds": 20,
+    "mean_throughput_delta": 0.045000000000000026,
+    "wins": 9,
+    "ties": 9,
+    "losses": 2
+  },
+  {
+    "condition": [
+      "corridor",
+      16,
+      "bursts",
+      0.0,
+      0.0
+    ],
+    "baseline": "fcfs",
+    "paired_seeds": 20,
+    "mean_throughput_delta": 0.10000000000000009,
+    "wins": 20,
+    "ties": 0,
+    "losses": 0
+  },
+  {
+    "condition": [
+      "corridor",
+      16,
+      "bursts",
+      0.15,
+      0.1
+    ],
+    "baseline": "fcfs",
+    "paired_seeds": 20,
+    "mean_throughput_delta": 0.16499999999999992,
+    "wins": 20,
+    "ties": 0,
+    "losses": 0
+  },
+  {
+    "condition": [
+      "corridor",
+      16,
+      "intermittent",
+      0.0,
+      0.0
+    ],
+    "baseline": "fcfs",
+    "paired_seeds": 20,
+    "mean_throughput_delta": 0.10000000000000009,
+    "wins": 20,
+    "ties": 0,
+    "losses": 0
+  },
+  {
+    "condition": [
+      "corridor",
+      16,
+      "intermittent",
+      0.15,
+      0.1
+    ],
+    "baseline": "fcfs",
+    "paired_seeds": 20,
+    "mean_throughput_delta": 0.16499999999999992,
+    "wins": 20,
+    "ties": 0,
+    "losses": 0
+  },
+  {
+    "condition": [
+      "corridor",
+      16,
+      "saturated",
+      0.0,
+      0.0
+    ],
+    "baseline": "fcfs",
+    "paired_seeds": 20,
+    "mean_throughput_delta": 0.10000000000000009,
+    "wins": 20,
+    "ties": 0,
+    "losses": 0
+  },
+  {
+    "condition": [
+      "corridor",
+      16,
+      "saturated",
+      0.15,
+      0.1
+    ],
+    "baseline": "fcfs",
+    "paired_seeds": 20,
+    "mean_throughput_delta": 0.16499999999999992,
+    "wins": 20,
+    "ties": 0,
+    "losses": 0
+  },
+  {
+    "condition": [
+      "corridor",
+      32,
+      "bursts",
+      0.0,
+      0.0
+    ],
+    "baseline": "fcfs",
+    "paired_seeds": 20,
+    "mean_throughput_delta": 0.7,
+    "wins": 20,
+    "ties": 0,
+    "losses": 0
+  },
+  {
+    "condition": [
+      "corridor",
+      32,
+      "bursts",
+      0.15,
+      0.1
+    ],
+    "baseline": "fcfs",
+    "paired_seeds": 20,
+    "mean_throughput_delta": 0.6499999999999999,
+    "wins": 20,
+    "ties": 0,
+    "losses": 0
+  },
+  {
+    "condition": [
+      "corridor",
+      32,
+      "intermittent",
+      0.0,
+      0.0
+    ],
+    "baseline": "fcfs",
+    "paired_seeds": 20,
+    "mean_throughput_delta": 0.7,
+    "wins": 20,
+    "ties": 0,
+    "losses": 0
+  },
+  {
+    "condition": [
+      "corridor",
+      32,
+      "intermittent",
+      0.15,
+      0.1
+    ],
+    "baseline": "fcfs",
+    "paired_seeds": 20,
+    "mean_throughput_delta": 0.6499999999999999,
+    "wins": 20,
+    "ties": 0,
+    "losses": 0
+  },
+  {
+    "condition": [
+      "corridor",
+      32,
+      "saturated",
+      0.0,
+      0.0
+    ],
+    "baseline": "fcfs",
+    "paired_seeds": 20,
+    "mean_throughput_delta": 0.7,
+    "wins": 20,
+    "ties": 0,
+    "losses": 0
+  },
+  {
+    "condition": [
+      "corridor",
+      32,
+      "saturated",
+      0.15,
+      0.1
+    ],
+    "baseline": "fcfs",
+    "paired_seeds": 20,
+    "mean_throughput_delta": 0.6499999999999999,
+    "wins": 20,
+    "ties": 0,
+    "losses": 0
+  },
+  {
+    "condition": [
+      "intersection",
+      4,
+      "bursts",
+      0.0,
+      0.0
+    ],
+    "baseline": "fcfs",
+    "paired_seeds": 20,
+    "mean_throughput_delta": 0.10000000000000142,
+    "wins": 20,
+    "ties": 0,
+    "losses": 0
+  },
+  {
+    "condition": [
+      "intersection",
+      4,
+      "bursts",
+      0.15,
+      0.1
+    ],
+    "baseline": "fcfs",
+    "paired_seeds": 20,
+    "mean_throughput_delta": -0.03500000000000001,
+    "wins": 2,
+    "ties": 11,
+    "losses": 7
+  },
+  {
+    "condition": [
+      "intersection",
+      4,
+      "intermittent",
+      0.0,
+      0.0
+    ],
+    "baseline": "fcfs",
+    "paired_seeds": 20,
+    "mean_throughput_delta": -0.27,
+    "wins": 0,
+    "ties": 0,
+    "losses": 20
+  },
+  {
+    "condition": [
+      "intersection",
+      4,
+      "intermittent",
+      0.15,
+      0.1
+    ],
+    "baseline": "fcfs",
+    "paired_seeds": 20,
+    "mean_throughput_delta": -0.305,
+    "wins": 0,
+    "ties": 0,
+    "losses": 20
+  },
+  {
+    "condition": [
+      "intersection",
+      4,
+      "saturated",
+      0.0,
+      0.0
+    ],
+    "baseline": "fcfs",
+    "paired_seeds": 20,
+    "mean_throughput_delta": 0.10000000000000142,
+    "wins": 20,
+    "ties": 0,
+    "losses": 0
+  },
+  {
+    "condition": [
+      "intersection",
+      4,
+      "saturated",
+      0.15,
+      0.1
+    ],
+    "baseline": "fcfs",
+    "paired_seeds": 20,
+    "mean_throughput_delta": -0.03500000000000001,
+    "wins": 2,
+    "ties": 11,
+    "losses": 7
+  },
+  {
+    "condition": [
+      "intersection",
+      8,
+      "bursts",
+      0.0,
+      0.0
+    ],
+    "baseline": "fcfs",
+    "paired_seeds": 20,
+    "mean_throughput_delta": -0.20000000000000018,
+    "wins": 0,
+    "ties": 0,
+    "losses": 20
+  },
+  {
+    "condition": [
+      "intersection",
+      8,
+      "bursts",
+      0.15,
+      0.1
+    ],
+    "baseline": "fcfs",
+    "paired_seeds": 20,
+    "mean_throughput_delta": 0.03500000000000007,
+    "wins": 9,
+    "ties": 7,
+    "losses": 4
+  },
+  {
+    "condition": [
+      "intersection",
+      8,
+      "intermittent",
+      0.0,
+      0.0
+    ],
+    "baseline": "fcfs",
+    "paired_seeds": 20,
+    "mean_throughput_delta": -0.655,
+    "wins": 0,
+    "ties": 0,
+    "losses": 20
+  },
+  {
+    "condition": [
+      "intersection",
+      8,
+      "intermittent",
+      0.15,
+      0.1
+    ],
+    "baseline": "fcfs",
+    "paired_seeds": 20,
+    "mean_throughput_delta": -0.5499999999999999,
+    "wins": 0,
+    "ties": 0,
+    "losses": 20
+  },
+  {
+    "condition": [
+      "intersection",
+      8,
+      "saturated",
+      0.0,
+      0.0
+    ],
+    "baseline": "fcfs",
+    "paired_seeds": 20,
+    "mean_throughput_delta": -0.20000000000000018,
+    "wins": 0,
+    "ties": 0,
+    "losses": 20
+  },
+  {
+    "condition": [
+      "intersection",
+      8,
+      "saturated",
+      0.15,
+      0.1
+    ],
+    "baseline": "fcfs",
+    "paired_seeds": 20,
+    "mean_throughput_delta": 0.03500000000000007,
+    "wins": 9,
+    "ties": 7,
+    "losses": 4
+  },
+  {
+    "condition": [
+      "intersection",
+      16,
+      "bursts",
+      0.0,
+      0.0
+    ],
+    "baseline": "fcfs",
+    "paired_seeds": 20,
+    "mean_throughput_delta": 0.0,
+    "wins": 0,
+    "ties": 20,
+    "losses": 0
+  },
+  {
+    "condition": [
+      "intersection",
+      16,
+      "bursts",
+      0.15,
+      0.1
+    ],
+    "baseline": "fcfs",
+    "paired_seeds": 20,
+    "mean_throughput_delta": -0.09000000000000008,
+    "wins": 0,
+    "ties": 2,
+    "losses": 18
+  },
+  {
+    "condition": [
+      "intersection",
+      16,
+      "intermittent",
+      0.0,
+      0.0
+    ],
+    "baseline": "fcfs",
+    "paired_seeds": 20,
+    "mean_throughput_delta": -0.040000000000000036,
+    "wins": 0,
+    "ties": 12,
+    "losses": 8
+  },
+  {
+    "condition": [
+      "intersection",
+      16,
+      "intermittent",
+      0.15,
+      0.1
+    ],
+    "baseline": "fcfs",
+    "paired_seeds": 20,
+    "mean_throughput_delta": -0.09000000000000008,
+    "wins": 0,
+    "ties": 2,
+    "losses": 18
+  },
+  {
+    "condition": [
+      "intersection",
+      16,
+      "saturated",
+      0.0,
+      0.0
+    ],
+    "baseline": "fcfs",
+    "paired_seeds": 20,
+    "mean_throughput_delta": 0.0,
+    "wins": 0,
+    "ties": 20,
+    "losses": 0
+  },
+  {
+    "condition": [
+      "intersection",
+      16,
+      "saturated",
+      0.15,
+      0.1
+    ],
+    "baseline": "fcfs",
+    "paired_seeds": 20,
+    "mean_throughput_delta": -0.09000000000000008,
+    "wins": 0,
+    "ties": 2,
+    "losses": 18
+  },
+  {
+    "condition": [
+      "intersection",
+      32,
+      "bursts",
+      0.0,
+      0.0
+    ],
+    "baseline": "fcfs",
+    "paired_seeds": 20,
+    "mean_throughput_delta": 0.9,
+    "wins": 20,
+    "ties": 0,
+    "losses": 0
+  },
+  {
+    "condition": [
+      "intersection",
+      32,
+      "bursts",
+      0.15,
+      0.1
+    ],
+    "baseline": "fcfs",
+    "paired_seeds": 20,
+    "mean_throughput_delta": 0.795,
+    "wins": 20,
+    "ties": 0,
+    "losses": 0
+  },
+  {
+    "condition": [
+      "intersection",
+      32,
+      "intermittent",
+      0.0,
+      0.0
+    ],
+    "baseline": "fcfs",
+    "paired_seeds": 20,
+    "mean_throughput_delta": 0.9,
+    "wins": 20,
+    "ties": 0,
+    "losses": 0
+  },
+  {
+    "condition": [
+      "intersection",
+      32,
+      "intermittent",
+      0.15,
+      0.1
+    ],
+    "baseline": "fcfs",
+    "paired_seeds": 20,
+    "mean_throughput_delta": 0.795,
+    "wins": 20,
+    "ties": 0,
+    "losses": 0
+  },
+  {
+    "condition": [
+      "intersection",
+      32,
+      "saturated",
+      0.0,
+      0.0
+    ],
+    "baseline": "fcfs",
+    "paired_seeds": 20,
+    "mean_throughput_delta": 0.9,
+    "wins": 20,
+    "ties": 0,
+    "losses": 0
+  },
+  {
+    "condition": [
+      "intersection",
+      32,
+      "saturated",
+      0.15,
+      0.1
+    ],
+    "baseline": "fcfs",
+    "paired_seeds": 20,
+    "mean_throughput_delta": 0.795,
+    "wins": 20,
+    "ties": 0,
+    "losses": 0
+  },
+  {
+    "condition": [
+      "warehouse",
+      4,
+      "bursts",
+      0.0,
+      0.0
+    ],
+    "baseline": "fcfs",
+    "paired_seeds": 20,
+    "mean_throughput_delta": -0.2999999999999998,
+    "wins": 0,
+    "ties": 0,
+    "losses": 20
+  },
+  {
+    "condition": [
+      "warehouse",
+      4,
+      "bursts",
+      0.15,
+      0.1
+    ],
+    "baseline": "fcfs",
+    "paired_seeds": 20,
+    "mean_throughput_delta": -0.27499999999999986,
+    "wins": 0,
+    "ties": 0,
+    "losses": 20
+  },
+  {
+    "condition": [
+      "warehouse",
+      4,
+      "intermittent",
+      0.0,
+      0.0
+    ],
+    "baseline": "fcfs",
+    "paired_seeds": 20,
+    "mean_throughput_delta": -0.07500000000000001,
+    "wins": 0,
+    "ties": 8,
+    "losses": 12
+  },
+  {
+    "condition": [
+      "warehouse",
+      4,
+      "intermittent",
+      0.15,
+      0.1
+    ],
+    "baseline": "fcfs",
+    "paired_seeds": 20,
+    "mean_throughput_delta": -0.08000000000000004,
+    "wins": 0,
+    "ties": 8,
+    "losses": 12
+  },
+  {
+    "condition": [
+      "warehouse",
+      4,
+      "saturated",
+      0.0,
+      0.0
+    ],
+    "baseline": "fcfs",
+    "paired_seeds": 20,
+    "mean_throughput_delta": -0.2999999999999998,
+    "wins": 0,
+    "ties": 0,
+    "losses": 20
+  },
+  {
+    "condition": [
+      "warehouse",
+      4,
+      "saturated",
+      0.15,
+      0.1
+    ],
+    "baseline": "fcfs",
+    "paired_seeds": 20,
+    "mean_throughput_delta": -0.27499999999999986,
+    "wins": 0,
+    "ties": 0,
+    "losses": 20
+  },
+  {
+    "condition": [
+      "warehouse",
+      8,
+      "bursts",
+      0.0,
+      0.0
+    ],
+    "baseline": "fcfs",
+    "paired_seeds": 20,
+    "mean_throughput_delta": -0.7000000000000002,
+    "wins": 0,
+    "ties": 0,
+    "losses": 20
+  },
+  {
+    "condition": [
+      "warehouse",
+      8,
+      "bursts",
+      0.15,
+      0.1
+    ],
+    "baseline": "fcfs",
+    "paired_seeds": 20,
+    "mean_throughput_delta": -0.4799999999999998,
+    "wins": 0,
+    "ties": 0,
+    "losses": 20
+  },
+  {
+    "condition": [
+      "warehouse",
+      8,
+      "intermittent",
+      0.0,
+      0.0
+    ],
+    "baseline": "fcfs",
+    "paired_seeds": 20,
+    "mean_throughput_delta": -0.565,
+    "wins": 0,
+    "ties": 0,
+    "losses": 20
+  },
+  {
+    "condition": [
+      "warehouse",
+      8,
+      "intermittent",
+      0.15,
+      0.1
+    ],
+    "baseline": "fcfs",
+    "paired_seeds": 20,
+    "mean_throughput_delta": -0.535,
+    "wins": 0,
+    "ties": 0,
+    "losses": 20
+  },
+  {
+    "condition": [
+      "warehouse",
+      8,
+      "saturated",
+      0.0,
+      0.0
+    ],
+    "baseline": "fcfs",
+    "paired_seeds": 20,
+    "mean_throughput_delta": -0.7000000000000002,
+    "wins": 0,
+    "ties": 0,
+    "losses": 20
+  },
+  {
+    "condition": [
+      "warehouse",
+      8,
+      "saturated",
+      0.15,
+      0.1
+    ],
+    "baseline": "fcfs",
+    "paired_seeds": 20,
+    "mean_throughput_delta": -0.4799999999999998,
+    "wins": 0,
+    "ties": 0,
+    "losses": 20
+  },
+  {
+    "condition": [
+      "warehouse",
+      16,
+      "bursts",
+      0.0,
+      0.0
+    ],
+    "baseline": "fcfs",
+    "paired_seeds": 20,
+    "mean_throughput_delta": -0.19999999999999973,
+    "wins": 0,
+    "ties": 0,
+    "losses": 20
+  },
+  {
+    "condition": [
+      "warehouse",
+      16,
+      "bursts",
+      0.15,
+      0.1
+    ],
+    "baseline": "fcfs",
+    "paired_seeds": 20,
+    "mean_throughput_delta": -0.06499999999999997,
+    "wins": 4,
+    "ties": 8,
+    "losses": 8
+  },
+  {
+    "condition": [
+      "warehouse",
+      16,
+      "intermittent",
+      0.0,
+      0.0
+    ],
+    "baseline": "fcfs",
+    "paired_seeds": 20,
+    "mean_throughput_delta": -0.8,
+    "wins": 0,
+    "ties": 0,
+    "losses": 20
+  },
+  {
+    "condition": [
+      "warehouse",
+      16,
+      "intermittent",
+      0.15,
+      0.1
+    ],
+    "baseline": "fcfs",
+    "paired_seeds": 20,
+    "mean_throughput_delta": -0.76,
+    "wins": 0,
+    "ties": 0,
+    "losses": 20
+  },
+  {
+    "condition": [
+      "warehouse",
+      16,
+      "saturated",
+      0.0,
+      0.0
+    ],
+    "baseline": "fcfs",
+    "paired_seeds": 20,
+    "mean_throughput_delta": -0.19999999999999973,
+    "wins": 0,
+    "ties": 0,
+    "losses": 20
+  },
+  {
+    "condition": [
+      "warehouse",
+      16,
+      "saturated",
+      0.15,
+      0.1
+    ],
+    "baseline": "fcfs",
+    "paired_seeds": 20,
+    "mean_throughput_delta": -0.06499999999999997,
+    "wins": 4,
+    "ties": 8,
+    "losses": 8
+  },
+  {
+    "condition": [
+      "warehouse",
+      32,
+      "bursts",
+      0.0,
+      0.0
+    ],
+    "baseline": "fcfs",
+    "paired_seeds": 20,
+    "mean_throughput_delta": 0.20000000000000018,
+    "wins": 20,
+    "ties": 0,
+    "losses": 0
+  },
+  {
+    "condition": [
+      "warehouse",
+      32,
+      "bursts",
+      0.15,
+      0.1
+    ],
+    "baseline": "fcfs",
+    "paired_seeds": 20,
+    "mean_throughput_delta": 0.39999999999999986,
+    "wins": 20,
+    "ties": 0,
+    "losses": 0
+  },
+  {
+    "condition": [
+      "warehouse",
+      32,
+      "intermittent",
+      0.0,
+      0.0
+    ],
+    "baseline": "fcfs",
+    "paired_seeds": 20,
+    "mean_throughput_delta": 0.20000000000000018,
+    "wins": 20,
+    "ties": 0,
+    "losses": 0
+  },
+  {
+    "condition": [
+      "warehouse",
+      32,
+      "intermittent",
+      0.15,
+      0.1
+    ],
+    "baseline": "fcfs",
+    "paired_seeds": 20,
+    "mean_throughput_delta": 0.39999999999999986,
+    "wins": 20,
+    "ties": 0,
+    "losses": 0
+  },
+  {
+    "condition": [
+      "warehouse",
+      32,
+      "saturated",
+      0.0,
+      0.0
+    ],
+    "baseline": "fcfs",
+    "paired_seeds": 20,
+    "mean_throughput_delta": 0.20000000000000018,
+    "wins": 20,
+    "ties": 0,
+    "losses": 0
+  },
+  {
+    "condition": [
+      "warehouse",
+      32,
+      "saturated",
+      0.15,
+      0.1
+    ],
+    "baseline": "fcfs",
+    "paired_seeds": 20,
+    "mean_throughput_delta": 0.39999999999999986,
+    "wins": 20,
+    "ties": 0,
+    "losses": 0
+  },
+  {
+    "condition": [
+      "corridor",
+      4,
+      "bursts",
+      0.0,
+      0.0
+    ],
+    "baseline": "rolling",
+    "paired_seeds": 20,
+    "mean_throughput_delta": -0.10000000000000009,
+    "wins": 0,
+    "ties": 0,
+    "losses": 20
+  },
+  {
+    "condition": [
+      "corridor",
+      4,
+      "bursts",
+      0.15,
+      0.1
+    ],
+    "baseline": "rolling",
+    "paired_seeds": 20,
+    "mean_throughput_delta": -0.1699999999999998,
+    "wins": 1,
+    "ties": 0,
+    "losses": 19
+  },
+  {
+    "condition": [
+      "corridor",
+      4,
+      "intermittent",
+      0.0,
+      0.0
+    ],
+    "baseline": "rolling",
+    "paired_seeds": 20,
+    "mean_throughput_delta": -0.405,
+    "wins": 0,
+    "ties": 0,
+    "losses": 20
+  },
+  {
+    "condition": [
+      "corridor",
+      4,
+      "intermittent",
+      0.15,
+      0.1
+    ],
+    "baseline": "rolling",
+    "paired_seeds": 20,
+    "mean_throughput_delta": -0.38,
+    "wins": 0,
+    "ties": 0,
+    "losses": 20
+  },
+  {
+    "condition": [
+      "corridor",
+      4,
+      "saturated",
+      0.0,
+      0.0
+    ],
+    "baseline": "rolling",
+    "paired_seeds": 20,
+    "mean_throughput_delta": -0.10000000000000009,
+    "wins": 0,
+    "ties": 0,
+    "losses": 20
+  },
+  {
+    "condition": [
+      "corridor",
+      4,
+      "saturated",
+      0.15,
+      0.1
+    ],
+    "baseline": "rolling",
+    "paired_seeds": 20,
+    "mean_throughput_delta": -0.1699999999999998,
+    "wins": 1,
+    "ties": 0,
+    "losses": 19
+  },
+  {
+    "condition": [
+      "corridor",
+      8,
+      "bursts",
+      0.0,
+      0.0
+    ],
+    "baseline": "rolling",
+    "paired_seeds": 20,
+    "mean_throughput_delta": -0.19999999999999973,
+    "wins": 0,
+    "ties": 0,
+    "losses": 20
+  },
+  {
+    "condition": [
+      "corridor",
+      8,
+      "bursts",
+      0.15,
+      0.1
+    ],
+    "baseline": "rolling",
+    "paired_seeds": 20,
+    "mean_throughput_delta": 0.045000000000000026,
+    "wins": 9,
+    "ties": 9,
+    "losses": 2
+  },
+  {
+    "condition": [
+      "corridor",
+      8,
+      "intermittent",
+      0.0,
+      0.0
+    ],
+    "baseline": "rolling",
+    "paired_seeds": 20,
+    "mean_throughput_delta": -0.585,
+    "wins": 0,
+    "ties": 0,
+    "losses": 20
+  },
+  {
+    "condition": [
+      "corridor",
+      8,
+      "intermittent",
+      0.15,
+      0.1
+    ],
+    "baseline": "rolling",
+    "paired_seeds": 20,
+    "mean_throughput_delta": -0.44500000000000006,
+    "wins": 0,
+    "ties": 0,
+    "losses": 20
+  },
+  {
+    "condition": [
+      "corridor",
+      8,
+      "saturated",
+      0.0,
+      0.0
+    ],
+    "baseline": "rolling",
+    "paired_seeds": 20,
+    "mean_throughput_delta": -0.19999999999999973,
+    "wins": 0,
+    "ties": 0,
+    "losses": 20
+  },
+  {
+    "condition": [
+      "corridor",
+      8,
+      "saturated",
+      0.15,
+      0.1
+    ],
+    "baseline": "rolling",
+    "paired_seeds": 20,
+    "mean_throughput_delta": 0.045000000000000026,
+    "wins": 9,
+    "ties": 9,
+    "losses": 2
+  },
+  {
+    "condition": [
+      "corridor",
+      16,
+      "bursts",
+      0.0,
+      0.0
+    ],
+    "baseline": "rolling",
+    "paired_seeds": 20,
+    "mean_throughput_delta": 0.10000000000000009,
+    "wins": 20,
+    "ties": 0,
+    "losses": 0
+  },
+  {
+    "condition": [
+      "corridor",
+      16,
+      "bursts",
+      0.15,
+      0.1
+    ],
+    "baseline": "rolling",
+    "paired_seeds": 20,
+    "mean_throughput_delta": 0.16499999999999992,
+    "wins": 20,
+    "ties": 0,
+    "losses": 0
+  },
+  {
+    "condition": [
+      "corridor",
+      16,
+      "intermittent",
+      0.0,
+      0.0
+    ],
+    "baseline": "rolling",
+    "paired_seeds": 20,
+    "mean_throughput_delta": 0.10000000000000009,
+    "wins": 20,
+    "ties": 0,
+    "losses": 0
+  },
+  {
+    "condition": [
+      "corridor",
+      16,
+      "intermittent",
+      0.15,
+      0.1
+    ],
+    "baseline": "rolling",
+    "paired_seeds": 20,
+    "mean_throughput_delta": 0.16499999999999992,
+    "wins": 20,
+    "ties": 0,
+    "losses": 0
+  },
+  {
+    "condition": [
+      "corridor",
+      16,
+      "saturated",
+      0.0,
+      0.0
+    ],
+    "baseline": "rolling",
+    "paired_seeds": 20,
+    "mean_throughput_delta": 0.10000000000000009,
+    "wins": 20,
+    "ties": 0,
+    "losses": 0
+  },
+  {
+    "condition": [
+      "corridor",
+      16,
+      "saturated",
+      0.15,
+      0.1
+    ],
+    "baseline": "rolling",
+    "paired_seeds": 20,
+    "mean_throughput_delta": 0.16499999999999992,
+    "wins": 20,
+    "ties": 0,
+    "losses": 0
+  },
+  {
+    "condition": [
+      "corridor",
+      32,
+      "bursts",
+      0.0,
+      0.0
+    ],
+    "baseline": "rolling",
+    "paired_seeds": 20,
+    "mean_throughput_delta": 0.7,
+    "wins": 20,
+    "ties": 0,
+    "losses": 0
+  },
+  {
+    "condition": [
+      "corridor",
+      32,
+      "bursts",
+      0.15,
+      0.1
+    ],
+    "baseline": "rolling",
+    "paired_seeds": 20,
+    "mean_throughput_delta": 0.6499999999999999,
+    "wins": 20,
+    "ties": 0,
+    "losses": 0
+  },
+  {
+    "condition": [
+      "corridor",
+      32,
+      "intermittent",
+      0.0,
+      0.0
+    ],
+    "baseline": "rolling",
+    "paired_seeds": 20,
+    "mean_throughput_delta": 0.7,
+    "wins": 20,
+    "ties": 0,
+    "losses": 0
+  },
+  {
+    "condition": [
+      "corridor",
+      32,
+      "intermittent",
+      0.15,
+      0.1
+    ],
+    "baseline": "rolling",
+    "paired_seeds": 20,
+    "mean_throughput_delta": 0.6499999999999999,
+    "wins": 20,
+    "ties": 0,
+    "losses": 0
+  },
+  {
+    "condition": [
+      "corridor",
+      32,
+      "saturated",
+      0.0,
+      0.0
+    ],
+    "baseline": "rolling",
+    "paired_seeds": 20,
+    "mean_throughput_delta": 0.7,
+    "wins": 20,
+    "ties": 0,
+    "losses": 0
+  },
+  {
+    "condition": [
+      "corridor",
+      32,
+      "saturated",
+      0.15,
+      0.1
+    ],
+    "baseline": "rolling",
+    "paired_seeds": 20,
+    "mean_throughput_delta": 0.6499999999999999,
+    "wins": 20,
+    "ties": 0,
+    "losses": 0
+  },
+  {
+    "condition": [
+      "intersection",
+      4,
+      "bursts",
+      0.0,
+      0.0
+    ],
+    "baseline": "rolling",
+    "paired_seeds": 20,
+    "mean_throughput_delta": 0.10000000000000142,
+    "wins": 20,
+    "ties": 0,
+    "losses": 0
+  },
+  {
+    "condition": [
+      "intersection",
+      4,
+      "bursts",
+      0.15,
+      0.1
+    ],
+    "baseline": "rolling",
+    "paired_seeds": 20,
+    "mean_throughput_delta": -0.03500000000000001,
+    "wins": 2,
+    "ties": 11,
+    "losses": 7
+  },
+  {
+    "condition": [
+      "intersection",
+      4,
+      "intermittent",
+      0.0,
+      0.0
+    ],
+    "baseline": "rolling",
+    "paired_seeds": 20,
+    "mean_throughput_delta": -0.27,
+    "wins": 0,
+    "ties": 0,
+    "losses": 20
+  },
+  {
+    "condition": [
+      "intersection",
+      4,
+      "intermittent",
+      0.15,
+      0.1
+    ],
+    "baseline": "rolling",
+    "paired_seeds": 20,
+    "mean_throughput_delta": -0.305,
+    "wins": 0,
+    "ties": 0,
+    "losses": 20
+  },
+  {
+    "condition": [
+      "intersection",
+      4,
+      "saturated",
+      0.0,
+      0.0
+    ],
+    "baseline": "rolling",
+    "paired_seeds": 20,
+    "mean_throughput_delta": 0.10000000000000142,
+    "wins": 20,
+    "ties": 0,
+    "losses": 0
+  },
+  {
+    "condition": [
+      "intersection",
+      4,
+      "saturated",
+      0.15,
+      0.1
+    ],
+    "baseline": "rolling",
+    "paired_seeds": 20,
+    "mean_throughput_delta": -0.03500000000000001,
+    "wins": 2,
+    "ties": 11,
+    "losses": 7
+  },
+  {
+    "condition": [
+      "intersection",
+      8,
+      "bursts",
+      0.0,
+      0.0
+    ],
+    "baseline": "rolling",
+    "paired_seeds": 20,
+    "mean_throughput_delta": -0.20000000000000018,
+    "wins": 0,
+    "ties": 0,
+    "losses": 20
+  },
+  {
+    "condition": [
+      "intersection",
+      8,
+      "bursts",
+      0.15,
+      0.1
+    ],
+    "baseline": "rolling",
+    "paired_seeds": 20,
+    "mean_throughput_delta": 0.03500000000000007,
+    "wins": 9,
+    "ties": 7,
+    "losses": 4
+  },
+  {
+    "condition": [
+      "intersection",
+      8,
+      "intermittent",
+      0.0,
+      0.0
+    ],
+    "baseline": "rolling",
+    "paired_seeds": 20,
+    "mean_throughput_delta": -0.655,
+    "wins": 0,
+    "ties": 0,
+    "losses": 20
+  },
+  {
+    "condition": [
+      "intersection",
+      8,
+      "intermittent",
+      0.15,
+      0.1
+    ],
+    "baseline": "rolling",
+    "paired_seeds": 20,
+    "mean_throughput_delta": -0.5499999999999999,
+    "wins": 0,
+    "ties": 0,
+    "losses": 20
+  },
+  {
+    "condition": [
+      "intersection",
+      8,
+      "saturated",
+      0.0,
+      0.0
+    ],
+    "baseline": "rolling",
+    "paired_seeds": 20,
+    "mean_throughput_delta": -0.20000000000000018,
+    "wins": 0,
+    "ties": 0,
+    "losses": 20
+  },
+  {
+    "condition": [
+      "intersection",
+      8,
+      "saturated",
+      0.15,
+      0.1
+    ],
+    "baseline": "rolling",
+    "paired_seeds": 20,
+    "mean_throughput_delta": 0.03500000000000007,
+    "wins": 9,
+    "ties": 7,
+    "losses": 4
+  },
+  {
+    "condition": [
+      "intersection",
+      16,
+      "bursts",
+      0.0,
+      0.0
+    ],
+    "baseline": "rolling",
+    "paired_seeds": 20,
+    "mean_throughput_delta": 0.0,
+    "wins": 0,
+    "ties": 20,
+    "losses": 0
+  },
+  {
+    "condition": [
+      "intersection",
+      16,
+      "bursts",
+      0.15,
+      0.1
+    ],
+    "baseline": "rolling",
+    "paired_seeds": 20,
+    "mean_throughput_delta": -0.09000000000000008,
+    "wins": 0,
+    "ties": 2,
+    "losses": 18
+  },
+  {
+    "condition": [
+      "intersection",
+      16,
+      "intermittent",
+      0.0,
+      0.0
+    ],
+    "baseline": "rolling",
+    "paired_seeds": 20,
+    "mean_throughput_delta": -0.040000000000000036,
+    "wins": 0,
+    "ties": 12,
+    "losses": 8
+  },
+  {
+    "condition": [
+      "intersection",
+      16,
+      "intermittent",
+      0.15,
+      0.1
+    ],
+    "baseline": "rolling",
+    "paired_seeds": 20,
+    "mean_throughput_delta": -0.09000000000000008,
+    "wins": 0,
+    "ties": 2,
+    "losses": 18
+  },
+  {
+    "condition": [
+      "intersection",
+      16,
+      "saturated",
+      0.0,
+      0.0
+    ],
+    "baseline": "rolling",
+    "paired_seeds": 20,
+    "mean_throughput_delta": 0.0,
+    "wins": 0,
+    "ties": 20,
+    "losses": 0
+  },
+  {
+    "condition": [
+      "intersection",
+      16,
+      "saturated",
+      0.15,
+      0.1
+    ],
+    "baseline": "rolling",
+    "paired_seeds": 20,
+    "mean_throughput_delta": -0.09000000000000008,
+    "wins": 0,
+    "ties": 2,
+    "losses": 18
+  },
+  {
+    "condition": [
+      "intersection",
+      32,
+      "bursts",
+      0.0,
+      0.0
+    ],
+    "baseline": "rolling",
+    "paired_seeds": 20,
+    "mean_throughput_delta": 0.9,
+    "wins": 20,
+    "ties": 0,
+    "losses": 0
+  },
+  {
+    "condition": [
+      "intersection",
+      32,
+      "bursts",
+      0.15,
+      0.1
+    ],
+    "baseline": "rolling",
+    "paired_seeds": 20,
+    "mean_throughput_delta": 0.795,
+    "wins": 20,
+    "ties": 0,
+    "losses": 0
+  },
+  {
+    "condition": [
+      "intersection",
+      32,
+      "intermittent",
+      0.0,
+      0.0
+    ],
+    "baseline": "rolling",
+    "paired_seeds": 20,
+    "mean_throughput_delta": 0.9,
+    "wins": 20,
+    "ties": 0,
+    "losses": 0
+  },
+  {
+    "condition": [
+      "intersection",
+      32,
+      "intermittent",
+      0.15,
+      0.1
+    ],
+    "baseline": "rolling",
+    "paired_seeds": 20,
+    "mean_throughput_delta": 0.795,
+    "wins": 20,
+    "ties": 0,
+    "losses": 0
+  },
+  {
+    "condition": [
+      "intersection",
+      32,
+      "saturated",
+      0.0,
+      0.0
+    ],
+    "baseline": "rolling",
+    "paired_seeds": 20,
+    "mean_throughput_delta": 0.9,
+    "wins": 20,
+    "ties": 0,
+    "losses": 0
+  },
+  {
+    "condition": [
+      "intersection",
+      32,
+      "saturated",
+      0.15,
+      0.1
+    ],
+    "baseline": "rolling",
+    "paired_seeds": 20,
+    "mean_throughput_delta": 0.795,
+    "wins": 20,
+    "ties": 0,
+    "losses": 0
+  },
+  {
+    "condition": [
+      "warehouse",
+      4,
+      "bursts",
+      0.0,
+      0.0
+    ],
+    "baseline": "rolling",
+    "paired_seeds": 20,
+    "mean_throughput_delta": -0.2999999999999998,
+    "wins": 0,
+    "ties": 0,
+    "losses": 20
+  },
+  {
+    "condition": [
+      "warehouse",
+      4,
+      "bursts",
+      0.15,
+      0.1
+    ],
+    "baseline": "rolling",
+    "paired_seeds": 20,
+    "mean_throughput_delta": -0.27499999999999986,
+    "wins": 0,
+    "ties": 0,
+    "losses": 20
+  },
+  {
+    "condition": [
+      "warehouse",
+      4,
+      "intermittent",
+      0.0,
+      0.0
+    ],
+    "baseline": "rolling",
+    "paired_seeds": 20,
+    "mean_throughput_delta": -0.07500000000000001,
+    "wins": 0,
+    "ties": 8,
+    "losses": 12
+  },
+  {
+    "condition": [
+      "warehouse",
+      4,
+      "intermittent",
+      0.15,
+      0.1
+    ],
+    "baseline": "rolling",
+    "paired_seeds": 20,
+    "mean_throughput_delta": -0.08000000000000004,
+    "wins": 0,
+    "ties": 8,
+    "losses": 12
+  },
+  {
+    "condition": [
+      "warehouse",
+      4,
+      "saturated",
+      0.0,
+      0.0
+    ],
+    "baseline": "rolling",
+    "paired_seeds": 20,
+    "mean_throughput_delta": -0.2999999999999998,
+    "wins": 0,
+    "ties": 0,
+    "losses": 20
+  },
+  {
+    "condition": [
+      "warehouse",
+      4,
+      "saturated",
+      0.15,
+      0.1
+    ],
+    "baseline": "rolling",
+    "paired_seeds": 20,
+    "mean_throughput_delta": -0.27499999999999986,
+    "wins": 0,
+    "ties": 0,
+    "losses": 20
+  },
+  {
+    "condition": [
+      "warehouse",
+      8,
+      "bursts",
+      0.0,
+      0.0
+    ],
+    "baseline": "rolling",
+    "paired_seeds": 20,
+    "mean_throughput_delta": -0.7000000000000002,
+    "wins": 0,
+    "ties": 0,
+    "losses": 20
+  },
+  {
+    "condition": [
+      "warehouse",
+      8,
+      "bursts",
+      0.15,
+      0.1
+    ],
+    "baseline": "rolling",
+    "paired_seeds": 20,
+    "mean_throughput_delta": -0.4799999999999998,
+    "wins": 0,
+    "ties": 0,
+    "losses": 20
+  },
+  {
+    "condition": [
+      "warehouse",
+      8,
+      "intermittent",
+      0.0,
+      0.0
+    ],
+    "baseline": "rolling",
+    "paired_seeds": 20,
+    "mean_throughput_delta": -0.565,
+    "wins": 0,
+    "ties": 0,
+    "losses": 20
+  },
+  {
+    "condition": [
+      "warehouse",
+      8,
+      "intermittent",
+      0.15,
+      0.1
+    ],
+    "baseline": "rolling",
+    "paired_seeds": 20,
+    "mean_throughput_delta": -0.535,
+    "wins": 0,
+    "ties": 0,
+    "losses": 20
+  },
+  {
+    "condition": [
+      "warehouse",
+      8,
+      "saturated",
+      0.0,
+      0.0
+    ],
+    "baseline": "rolling",
+    "paired_seeds": 20,
+    "mean_throughput_delta": -0.7000000000000002,
+    "wins": 0,
+    "ties": 0,
+    "losses": 20
+  },
+  {
+    "condition": [
+      "warehouse",
+      8,
+      "saturated",
+      0.15,
+      0.1
+    ],
+    "baseline": "rolling",
+    "paired_seeds": 20,
+    "mean_throughput_delta": -0.4799999999999998,
+    "wins": 0,
+    "ties": 0,
+    "losses": 20
+  },
+  {
+    "condition": [
+      "warehouse",
+      16,
+      "bursts",
+      0.0,
+      0.0
+    ],
+    "baseline": "rolling",
+    "paired_seeds": 20,
+    "mean_throughput_delta": -0.19999999999999973,
+    "wins": 0,
+    "ties": 0,
+    "losses": 20
+  },
+  {
+    "condition": [
+      "warehouse",
+      16,
+      "bursts",
+      0.15,
+      0.1
+    ],
+    "baseline": "rolling",
+    "paired_seeds": 20,
+    "mean_throughput_delta": -0.06499999999999997,
+    "wins": 4,
+    "ties": 8,
+    "losses": 8
+  },
+  {
+    "condition": [
+      "warehouse",
+      16,
+      "intermittent",
+      0.0,
+      0.0
+    ],
+    "baseline": "rolling",
+    "paired_seeds": 20,
+    "mean_throughput_delta": -0.8,
+    "wins": 0,
+    "ties": 0,
+    "losses": 20
+  },
+  {
+    "condition": [
+      "warehouse",
+      16,
+      "intermittent",
+      0.15,
+      0.1
+    ],
+    "baseline": "rolling",
+    "paired_seeds": 20,
+    "mean_throughput_delta": -0.76,
+    "wins": 0,
+    "ties": 0,
+    "losses": 20
+  },
+  {
+    "condition": [
+      "warehouse",
+      16,
+      "saturated",
+      0.0,
+      0.0
+    ],
+    "baseline": "rolling",
+    "paired_seeds": 20,
+    "mean_throughput_delta": -0.19999999999999973,
+    "wins": 0,
+    "ties": 0,
+    "losses": 20
+  },
+  {
+    "condition": [
+      "warehouse",
+      16,
+      "saturated",
+      0.15,
+      0.1
+    ],
+    "baseline": "rolling",
+    "paired_seeds": 20,
+    "mean_throughput_delta": -0.06499999999999997,
+    "wins": 4,
+    "ties": 8,
+    "losses": 8
+  },
+  {
+    "condition": [
+      "warehouse",
+      32,
+      "bursts",
+      0.0,
+      0.0
+    ],
+    "baseline": "rolling",
+    "paired_seeds": 20,
+    "mean_throughput_delta": 0.20000000000000018,
+    "wins": 20,
+    "ties": 0,
+    "losses": 0
+  },
+  {
+    "condition": [
+      "warehouse",
+      32,
+      "bursts",
+      0.15,
+      0.1
+    ],
+    "baseline": "rolling",
+    "paired_seeds": 20,
+    "mean_throughput_delta": 0.39999999999999986,
+    "wins": 20,
+    "ties": 0,
+    "losses": 0
+  },
+  {
+    "condition": [
+      "warehouse",
+      32,
+      "intermittent",
+      0.0,
+      0.0
+    ],
+    "baseline": "rolling",
+    "paired_seeds": 20,
+    "mean_throughput_delta": 0.20000000000000018,
+    "wins": 20,
+    "ties": 0,
+    "losses": 0
+  },
+  {
+    "condition": [
+      "warehouse",
+      32,
+      "intermittent",
+      0.15,
+      0.1
+    ],
+    "baseline": "rolling",
+    "paired_seeds": 20,
+    "mean_throughput_delta": 0.39999999999999986,
+    "wins": 20,
+    "ties": 0,
+    "losses": 0
+  },
+  {
+    "condition": [
+      "warehouse",
+      32,
+      "saturated",
+      0.0,
+      0.0
+    ],
+    "baseline": "rolling",
+    "paired_seeds": 20,
+    "mean_throughput_delta": 0.20000000000000018,
+    "wins": 20,
+    "ties": 0,
+    "losses": 0
+  },
+  {
+    "condition": [
+      "warehouse",
+      32,
+      "saturated",
+      0.15,
+      0.1
+    ],
+    "baseline": "rolling",
+    "paired_seeds": 20,
+    "mean_throughput_delta": 0.39999999999999986,
+    "wins": 20,
+    "ties": 0,
+    "losses": 0
+  }
+]

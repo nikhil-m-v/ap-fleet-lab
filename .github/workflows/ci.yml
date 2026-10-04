@@ -16,7 +16,7 @@ jobs:
           cache: pip
       - run: python -m pip install -r requirements.lock
       - run: python -m pip install --no-deps -e .
-      - run: python -m pytest -q --basetemp=.pytest_cache/temp
+      - run: python -m pytest -q --basetemp=.pytest_tmp
       - run: python -m ap_fleet.cli benchmark --scenarios intersection --fleets 4 --demands saturated --profiles mixed --seeds 1 --warmup 0 --duration 30 --output benchmark-output/ci
   frontend:
     runs-on: ubuntu-latest

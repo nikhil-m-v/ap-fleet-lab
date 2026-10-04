@@ -58,7 +58,7 @@ Read the [research design](docs/design.md), [benchmark results](docs/results/REA
 ## Checks
 
 ```powershell
-.\.venv\Scripts\python.exe -m pytest -q --basetemp=.pytest_cache/temp
+.\.venv\Scripts\python.exe -m pytest -q --basetemp=.pytest_tmp
 cd frontend
 npm test
 npm run build
