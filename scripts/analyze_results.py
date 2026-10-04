@@ -8,6 +8,8 @@ import sys
 import platform
 import os
 import importlib.metadata
+
+os.environ.setdefault("MPLCONFIGDIR", str(Path("data/.mplconfig").resolve()))
 import matplotlib
 
 matplotlib.use("Agg")
