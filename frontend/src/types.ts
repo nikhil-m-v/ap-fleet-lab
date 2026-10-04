@@ -1,0 +1,9 @@
+export type Point = [number,number];
+export type Scenario = {name:string;clearance:number;robots:{id:string;radius:number;max_speed:number;acceleration:number;legs:Point[][]}[]};
+export type Config = {scenario:string;custom_scenario?:Scenario|null;fleet_size:number;algorithm:string;demand:string;seed:number;duration:number;warmup:number;delay_probability:number;max_delay:number;slowdown_probability:number;slowdown_factor:number;timing_margin:number;solver_budget:number;playback_speed:number};
+export type Metrics = {completed_missions?:number;missions_per_minute?:number;p95_wait_seconds?:number;mean_wait_seconds?:number;jain_fairness?:number|null;clearance_violations?:number;planning_seconds?:number;per_robot_completions?:Record<string,number>;queue_size?:number;queue_growth?:number;solver_failures?:number;mean_mission_recovery_seconds?:number|null};
+export type Event = {time:number;type:string;robot?:string;leg?:number;mission?:number;start?:number;end?:number;planned?:number;seconds?:number;effective_at?:number;stop?:number};
+export type Snapshot = {id:string;status:string;time:number;paused?:boolean;error?:string;config?:Config;scenario?:Scenario;robots:{id:string;position:Point;radius:number;moving:boolean;leg:number;mission:number}[];metrics:Metrics;plan?:{period?:number|null;status:string;starts:Record<string,number[]>;lower_bound?:number|null;optimality_gap?:number|null};schedule_version?:number;events?:Event[]};
+export type Replay = {header:{kind:string;data:{scenario:Scenario;config:Config}};frames:Snapshot[];events:Event[]};
+export const algorithmLabels: Record<string,string> = {fcfs:'First come, first served',periodic:'AP periodic optimization',rolling:'Rolling-window optimization'};
+export const format = (n:number|null|undefined,digits=1)=>n==null?'—':n.toFixed(digits);

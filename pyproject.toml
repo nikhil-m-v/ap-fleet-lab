@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ap-fleet-lab"
+version = "0.1.0"
+description = "Reproducible periodic robot scheduling experiments"
+requires-python = ">=3.12,<3.14"
+dependencies = ["fastapi==0.115.12", "uvicorn==0.34.2", "numpy==2.2.6", "ortools==9.14.6206"]
+
+[project.optional-dependencies]
+dev = ["pytest==8.3.5", "httpx==0.28.1"]
+
+[project.scripts]
+ap-fleet = "ap_fleet.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+ap_fleet = ["scenarios/*.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
