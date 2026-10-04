@@ -63,6 +63,44 @@ class PeriodicScheduler:
                 ):
                     clique.append(key)
             lower = max(lower, sum(durations[key] for key in clique))
+        # An independent complete conflict component can serialize whole robot
+        # missions. Its total occupied time is both a lower bound and achievable.
+        unseen = set(durations)
+        components = []
+        while unseen:
+            seed = min(unseen)
+            component, frontier = {seed}, [seed]
+            unseen.remove(seed)
+            while frontier:
+                node = frontier.pop()
+                neighbors = {
+                    key
+                    for key in unseen
+                    if key[0] == node[0] or frozenset((key, node)) in self.conflicts
+                }
+                component.update(neighbors)
+                unseen.difference_update(neighbors)
+                frontier.extend(neighbors)
+            components.append(component)
+        certified = all(
+            all(
+                a[0] == b[0] or frozenset((a, b)) in self.conflicts
+                for a in component
+                for b in component
+                if a != b
+            )
+            for component in components
+        )
+        certified_starts = {}
+        certified_period = max(
+            sum(durations[key] for key in component) for component in components
+        )
+        if certified:
+            for component in components:
+                at = 0
+                for key in sorted(component):
+                    certified_starts[key] = at
+                    at += durations[key]
         model = cp_model.CpModel()
         period = model.new_int_var(lower, upper, "period")
         if self.max_period is not None:
@@ -72,7 +110,9 @@ class PeriodicScheduler:
             for key in durations
         }
         offset = 0
-        model.add_hint(period, upper)
+        model.add_hint(period, certified_period if certified else upper)
+        if certified:
+            model.add(period == certified_period)
         for robot in scenario.robots:
             first = starts[robot.id, 0]
             model.add(first < period)
@@ -84,11 +124,23 @@ class PeriodicScheduler:
                         >= starts[robot.id, j - 1] + durations[robot.id, j - 1]
                     )
                 model.add(starts[key] + durations[key] <= first + period)
-                model.add_hint(starts[key], offset)
+                model.add_hint(
+                    starts[key], certified_starts[key] if certified else offset
+                )
+                if certified:
+                    model.add(starts[key] == certified_starts[key])
                 offset += durations[key]
         for index, pair in enumerate(sorted(self.conflicts, key=lambda p: sorted(p))):
             a, b = sorted(pair)
             for shift in range(-2, 3):
+                if certified:
+                    sa, sb = (
+                        certified_starts[a],
+                        certified_starts[b] + shift * certified_period,
+                    )
+                    if not (sa + durations[a] <= sb or sb + durations[b] <= sa):
+                        model.add(False)
+                    continue
                 nonoverlap(
                     model,
                     starts[a],
@@ -121,7 +173,8 @@ class PeriodicScheduler:
             optimality_gap=max(0.0, (objective - bound) / objective),
             planning_seconds=elapsed,
             diagnostics=[
-                "Common period; exclusive complete traversals; ±2 cycle checks"
+                "Common period; exclusive complete traversals; ±2 cycle checks",
+                f"Exact independent clique certificate: {certified}",
             ],
         )
 

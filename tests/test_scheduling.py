@@ -98,3 +98,12 @@ def test_rolling_clique_reduction_matches_exhaustive_weighted_optimum():
     assert plan.status == "OPTIMAL"
     score = sum(weights[key] * round(plan.starts[key[0]][0] / TICK) for key in pending)
     assert score == min(scores)
+
+
+@pytest.mark.parametrize("kind", ["intersection", "corridor", "warehouse"])
+def test_large_fleet_constructive_period_is_certified(kind):
+    scenario = make_scenario(kind, 32)
+    plan = PeriodicScheduler(incompatibilities(scenario), budget=2).plan(scenario)
+    assert plan.status == "OPTIMAL"
+    assert plan.period == pytest.approx(plan.lower_bound)
+    assert plan.optimality_gap == 0
